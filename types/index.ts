@@ -1,20 +1,28 @@
+import type { LucideIcon } from "lucide-react"
+
+export type CarCategory = "sedan" | "suv" | "jeep" | "economy" | "exotic"
+
 export type Car = {
-  brand: string
-  model: string
+  name: string
   image: string
-  passengers: number
-  rating: number
-  year: string
-  transmission: string
-  fuel: string
-  price: string
+  category: CarCategory
+  badge?: string
+  seats: number
+  doors: number
+  topSpeed: string
+  fuel: "Petrol" | "Diesel"
+  price: number
+  featured: boolean
 }
 
 export type Review = {
   name: string
+  role: string
   stars: number
   text: string
-  active: boolean
+  active?: boolean
+  car?: string
+  location?: string
 }
 
 export type FAQ = {
@@ -22,4 +30,15 @@ export type FAQ = {
   q: string
   bold: string
   answer: string
+}
+
+export type NavLink = {
+  label: string
+  href: string
+}
+
+export type Service = {
+  icon: LucideIcon
+  title: string
+  description: string
 }

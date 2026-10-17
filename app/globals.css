@@ -4,43 +4,57 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Veluxe Luxury Car Rental Dark Theme - Default */
-  --background: oklch(0.12 0 0); /* Very dark gray/black #0A0A0A */
-  --foreground: oklch(0.98 0 0); /* White #FFFFFF */
-  
-  --card: oklch(0.18 0 0); /* Slightly lighter dark for cards #1A1A1A */
-  --card-foreground: oklch(0.98 0 0);
-  
-  --popover: oklch(0.18 0 0);
-  --popover-foreground: oklch(0.98 0 0);
-  
-  --primary: oklch(0.98 0 0); /* White accents */
-  --primary-foreground: oklch(0.12 0 0); /* Black text on white */
-  
-  --secondary: oklch(0.25 0 0); /* Gray secondary */
-  --secondary-foreground: oklch(0.98 0 0);
-  
-  --muted: oklch(0.25 0 0);
-  --muted-foreground: oklch(0.65 0 0);
-  
-  --accent: oklch(0.25 0 0);
-  --accent-foreground: oklch(0.98 0 0);
-  
-  --destructive: oklch(0.6 0.2 20);
-  --destructive-foreground: oklch(0.98 0 0);
-  
-  --border: oklch(0.25 0 0);
-  --input: oklch(0.25 0 0);
-  --ring: oklch(0.98 0 0);
-  
-  --radius: 1.5rem; /* Extreme rounded corners for Veluxe style */
-  
+  /* ═══════════════════════════════════════════════════════════════════
+     CAiR Turbo — brand tokens
+     Verified against the live source stylesheet:
+     turbocar.autos/assets/style-CwUmp3c-.css  (:root block)
+     ═══════════════════════════════════════════════════════════════════ */
+  --gold: #c9a94e;           /* source --gold            */
+  --gold-light: #dfc97a;     /* source --gold-light      */
+  --gold-dark: #a08330;      /* source --gold-dark       */
+  --on-gold: #0a0a0a;        /* source .btn-primary text (black on gold) */
+  --inverse: #0a0a0a;        /* source --black   — brand-dark surfaces (theme-independent) */
+  --inverse-raised: #1e1e1e; /* source --black-lighter — raised dark surfaces / inputs */
+  --inverse-card: #161616;   /* source --black-card  — dark cards & popovers */
+  --inverse-foreground: #f5f0e8; /* source --pearl — text on brand-dark surfaces */
+  --gold-tint: rgba(201, 169, 78, 0.1);  /* source #c9a94e1a */
+  --gold-border: rgba(201, 169, 78, 0.3); /* source rgba(201,169,78,.3) */
+  --gradient-gold: linear-gradient(135deg, var(--gold), var(--gold-dark));       /* source .btn-primary */
+  --gradient-gold-hover: linear-gradient(135deg, var(--gold-light), var(--gold)); /* source .btn-primary:hover */
+
+  /* ═══ DARK THEME (default) — the source site's native identity ═══ */
+  --background: #0a0a0a;            /* source --black        */
+  --foreground: #f5f0e8;            /* source --pearl (17.5:1 on black) */
+  --card: #161616;                  /* source --black-card   */
+  --card-foreground: #f5f0e8;
+  --popover: #161616;
+  --popover-foreground: #f5f0e8;
+  --primary: #c9a94e;               /* brand gold CTA */
+  --primary-foreground: #0a0a0a;
+  --secondary: #1e1e1e;             /* source --black-lighter */
+  --secondary-foreground: #f5f0e8;
+  --muted: #141414;                 /* source --black-light  */
+  --muted-foreground: #c4bfb5;      /* source --pearl-dim (10.8:1 on black) */
+  --accent: rgba(201, 169, 78, 0.12);
+  --accent-foreground: #dfc97a;     /* source --gold-light */
+  --destructive: #e74c3c;           /* source --red */
+  --destructive-foreground: #f5f0e8;
+  --border: rgba(255, 255, 255, 0.1);  /* source card/input borders */
+  --input: rgba(255, 255, 255, 0.14);
+  --ring: #c9a94e;                  /* gold focus ring (8.8:1 on black) */
+  --gold-ink: #c9a94e;              /* gold text on themed surfaces */
+  --scrollbar-track: #0a0a0a;
+  --scrollbar-thumb: #333333;       /* source --gray-700 */
+  --scrollbar-thumb-hover: #555555;
+
+  --radius: 1.5rem; /* Extreme rounded corners for luxury style */
+
   --chart-1: oklch(0.65 0.15 260);
   --chart-2: oklch(0.75 0.18 30);
   --chart-3: oklch(0.6 0.1 200);
   --chart-4: oklch(0.8 0.12 50);
   --chart-5: oklch(0.7 0.08 270);
-  
+
   --sidebar: oklch(0.15 0 0);
   --sidebar-foreground: oklch(0.95 0 0);
   --sidebar-primary: oklch(0.65 0.15 260);
@@ -52,24 +66,34 @@
 }
 
 .light {
-  /* Strong light mode with good contrast */
-  --background: oklch(0.98 0 0);      /* Pure white #FAFAFA */
-  --foreground: oklch(0.08 0 0);      /* Near black #121212 */
-  --card: oklch(0.94 0 0);            /* Light gray card #EAEAEA */
-  --card-foreground: oklch(0.08 0 0);
-  --popover: oklch(0.98 0 0);
-  --popover-foreground: oklch(0.08 0 0);
-  --primary: oklch(0.08 0 0);         /* Black buttons */
-  --primary-foreground: oklch(0.98 0 0);
-  --secondary: oklch(0.92 0 0);
-  --secondary-foreground: oklch(0.08 0 0);
-  --muted: oklch(0.93 0 0);           /* #EDEDED-ish */
-  --muted-foreground: oklch(0.42 0 0); /* Medium gray text */
-  --accent: oklch(0.92 0 0);
-  --accent-foreground: oklch(0.08 0 0);
-  --border: oklch(0.85 0 0);
-  --input: oklch(0.92 0 0);
-  --ring: oklch(0.08 0 0);
+  /* ═══ LIGHT THEME — the same brand, re-tuned for daylight ═══
+     Foundations are the source palette's own light-side tokens
+     (--pearl, --gray-100, --gray-500). Gold stays the CTA colour;
+     gold *text* switches to --gold-dark (3.7:1 on white, AA large)
+     and small gold text to a darkened derivation (4.8:1, AA body). */
+  --background: #f5f0e8;            /* source --pearl (warm luxury page) */
+  --foreground: #0a0a0a;            /* source --black (17.5:1 on pearl) */
+  --card: #ffffff;                  /* white cards lift off pearl */
+  --card-foreground: #0a0a0a;
+  --popover: #ffffff;
+  --popover-foreground: #0a0a0a;
+  --primary: #c9a94e;               /* identical gold CTA in both themes */
+  --primary-foreground: #0a0a0a;
+  --secondary: #ffffff;
+  --secondary-foreground: #0a0a0a;
+  --muted: #efe9dd;                 /* derived pearl shade for alt sections */
+  --muted-foreground: #6b6b6b;      /* source --gray-500 (5.4:1 on white) */
+  --accent: rgba(201, 169, 78, 0.14);
+  --accent-foreground: #8a6f28;     /* derived darkened gold (4.8:1, AA body) */
+  --destructive: #e74c3c;
+  --destructive-foreground: #ffffff;
+  --border: rgba(10, 10, 10, 0.09);
+  --input: rgba(10, 10, 10, 0.14);
+  --ring: #a08330;                  /* --gold-dark focus ring (3.7:1 on white) */
+  --gold-ink: #a08330;              /* gold text (wordmarks, links) — AA large on pearl/white */
+  --scrollbar-track: #f5f0e8;
+  --scrollbar-thumb: #d8d0be;       /* derived pearl shade */
+  --scrollbar-thumb-hover: #bdb49e;
 }
 
 @theme inline {
@@ -95,6 +119,20 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+
+  /* CAiR Turbo brand utilities (verified source palette) */
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+  --color-gold-ink: var(--gold-ink);          /* gold text — AA in both themes */
+  --color-gold-tint: var(--gold-tint);
+  --color-gold-border: var(--gold-border);
+  --color-on-gold: var(--on-gold);            /* text/icons on gold surfaces */
+  --color-inverse: var(--inverse);            /* brand-dark surfaces (theme-independent) */
+  --color-inverse-raised: var(--inverse-raised);
+  --color-inverse-card: var(--inverse-card);
+  --color-inverse-foreground: var(--inverse-foreground);
+  --shadow-gold: 0 4px 20px rgba(201, 169, 78, 0.3); /* source --shadow-gold */
   
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
@@ -124,24 +162,40 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    /* Keep the scrollbar gutter reserved so the page does not shift */
+    scrollbar-gutter: stable;
+  }
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Prevent Radix UI / react-remove-scroll from locking body scroll, freezing scrollbar, and causing layout shift */
+  html body[data-scroll-locked],
+  html body[data-radix-scroll-lock],
+  body[data-scroll-locked] {
+    overflow: auto !important;
+    overscroll-behavior: auto !important;
+    margin-right: 0px !important;
+    padding-right: 0px !important;
+    position: static !important;
+    pointer-events: auto !important;
+  }
   
-  /* Custom Scrollbar for Veluxe theme */
+  /* Custom Scrollbar for CAiR Turbo theme (theme-aware tokens) */
   ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: #0A0A0A;
+    background: var(--scrollbar-track);
   }
   ::-webkit-scrollbar-thumb {
-    background: #333333;
+    background: var(--scrollbar-thumb);
     border-radius: 10px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #555555;
+    background: var(--scrollbar-thumb-hover);
   }
 }
 
