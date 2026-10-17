@@ -1,8 +1,8 @@
 <div align="center">
-  <img src="public/hero.jpg" alt="Veluxe Hero Image" width="100%" style="border-radius: 12px; margin-bottom: 20px;" />
-  <h1 align="center">Veluxe — Premium Car Rental Landing Page</h1>
+  <img src="public/hero.jpg" alt="CAiR Turbo luxury car rental in Cairo, Egypt" width="100%" style="border-radius: 12px; margin-bottom: 20px;" />
+  <h1 align="center">CAiR Turbo — Premium Car Rental in Cairo, Egypt</h1>
   <p align="center">
-    A meticulously crafted, dark-first luxury car rental landing page built with modern web technologies. Features a seamless View Transition theme toggle, responsive design, and fluid animations.
+    The official CAiR Turbo landing page — luxury car rentals in Cairo &amp; Giza. Built with modern web technologies, featuring a seamless View Transition theme toggle, responsive design, and fluid animations.
   </p>
   
   <div>
@@ -21,13 +21,14 @@
 - 🎨 **Luxury Aesthetics**: High-end typography, glassmorphism overlays, and premium contrasting semantic tokens (powered by `oklch` color spaces).
 - 📱 **Fully Responsive**: Flawless scaling from widescreen desktops down to mobile devices, with a custom mobile drawer menu.
 - ⚡ **Performance First**: Built on Next.js App Router, ensuring lightning-fast load times and optimized image delivery.
+- 🔍 **SEO Optimized**: Unique metadata, Open Graph tags, canonical URL, sitemap, robots.txt, and `AutoRental` + `FAQPage` structured data.
 
 ## 🚀 Quick Start
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/veluxe.git
-   cd veluxe
+   git clone https://github.com/Apptunix-solutions/CAiR-Turbo-Rental-F
+   cd CAiR-Turbo-Rental-F
    ```
 
 2. **Install dependencies**
@@ -45,10 +46,11 @@
 
 ## 📂 Project Structure
 
-- `/app` — Next.js 15 App Router pages, layout, and global CSS (where theme tokens are defined).
-- `/components` — Reusable UI components (Hero, Features, Pricing, Header, Footer).
+- `/app` — Next.js App Router pages, layout (metadata + structured data), global CSS, sitemap and robots routes.
+- `/components` — Reusable UI components (Hero, Fleet, Services, How It Works, About, Testimonials, FAQ/Contact, Header, Footer).
 - `/components/ui` — Shared micro-components like custom buttons and section dividers.
-- `/public` — Static assets, images, and standard metadata files.
+- `/data` — Verified CAiR Turbo business content: fleet, services, reviews, FAQs, and contact details (source of truth: [turbocar.autos](https://www.turbocar.autos)).
+- `/public` — Static assets and images.
 
 ## 🛠 Tech Stack
 

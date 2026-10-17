@@ -1,8 +1,8 @@
 import { MetadataRoute } from 'next'
+import { business } from '@/data'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Replace with your actual domain when deploying
-  const baseUrl = 'https://veluxe-rental.com'
+  const baseUrl = business.url
 
   return [
     {
@@ -11,12 +11,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 1,
     },
-    // If you add more pages later (e.g., /fleet, /about), you can add them here:
-    // {
-    //   url: `${baseUrl}/fleet`,
-    //   lastModified: new Date(),
-    //   changeFrequency: 'weekly',
-    //   priority: 0.8,
-    // },
   ]
 }
