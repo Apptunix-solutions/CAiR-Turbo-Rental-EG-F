@@ -186,19 +186,19 @@ export function CTA() {
                   >
                     <SelectValue placeholder="Car preference (optional)" />
                   </SelectTrigger>
-                  <SelectContent position="popper" align="start" className="rounded-2xl border-white/10 bg-inverse-card text-white shadow-2xl">
+                  <SelectContent position="popper" align="start" className="rounded-xl border-white/10 bg-inverse-card text-white shadow-2xl">
                     {cars.map((car) => (
                       <SelectItem
                         key={car.name}
                         value={car.name}
-                        className="rounded-xl py-2 pl-8 pr-10 focus:bg-white/10 focus:text-white data-[highlighted]:bg-white/10 data-[highlighted]:text-white"
+                        className="rounded-lg py-2 pl-8 pr-10 focus:bg-white/10 focus:text-white data-[highlighted]:bg-white/10 data-[highlighted]:text-white"
                       >
                         {car.name}
                       </SelectItem>
                     ))}
                     <SelectItem
                       value="Other"
-                      className="rounded-xl py-2 pl-8 pr-10 focus:bg-white/10 focus:text-white data-[highlighted]:bg-white/10 data-[highlighted]:text-white"
+                      className="rounded-lg py-2 pl-8 pr-10 focus:bg-white/10 focus:text-white data-[highlighted]:bg-white/10 data-[highlighted]:text-white"
                     >
                       Other
                     </SelectItem>

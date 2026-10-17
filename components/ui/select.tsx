@@ -62,7 +62,7 @@ function SelectContent({
       <SelectPrimitive.Content
         data-slot="select-content"
         className={cn(
-          "relative z-50 max-h-[var(--radix-select-content-available-height,24rem)] min-w-[9rem] origin-[var(--radix-select-content-transform-origin)] overflow-hidden rounded-2xl border border-border/80 bg-popover/95 text-popover-foreground shadow-2xl backdrop-blur-xl data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95",
+          "relative z-50 max-h-[var(--radix-select-content-available-height,24rem)] min-w-[9rem] origin-[var(--radix-select-content-transform-origin)] overflow-hidden rounded-xl border border-border/80 bg-popover/95 text-popover-foreground shadow-2xl backdrop-blur-xl data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95",
           position === "popper" &&
             "data-[side=bottom]:translate-y-1.5 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1.5",
           className
@@ -74,7 +74,7 @@ function SelectContent({
         <SelectScrollUpButton />
         <SelectPrimitive.Viewport
           className={cn(
-            "p-2 max-h-64 overflow-y-auto overflow-x-hidden scroll-smooth flex flex-col gap-1",
+            "p-1.5 max-h-64 overflow-y-auto overflow-x-hidden scroll-smooth flex flex-col gap-1",
             // Clean, responsive scrollbar styling for dropdown options
             "[&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-muted-foreground/30 hover:[&::-webkit-scrollbar-thumb]:bg-muted-foreground/60",
             position === "popper" &&
@@ -111,7 +111,7 @@ function SelectItem({
     <SelectPrimitive.Item
       data-slot="select-item"
       className={cn(
-        "relative flex w-full cursor-pointer items-center gap-2 rounded-xl py-2.5 pr-9 pl-3.5 text-sm font-medium outline-hidden select-none transition-all duration-200",
+        "relative flex w-full cursor-pointer items-center gap-2 rounded-lg py-2.5 pr-9 pl-3.5 text-sm font-medium outline-hidden select-none transition-all duration-200",
         "focus:bg-accent focus:text-accent-foreground",
         "data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground",
         "data-[state=checked]:bg-accent/80 data-[state=checked]:text-foreground data-[state=checked]:font-semibold",
